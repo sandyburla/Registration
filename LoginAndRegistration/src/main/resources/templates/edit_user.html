@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Editing registration form of user</title>
+</head>
+
+<h2 ALIGN="CENTER">Edit_user </h2>
+<form action="/register" th:object ="${register}" method="post">
+<table border="0" align="center">
+<tbody>
+<tr>
+<td><label for="auth_user_id">auth_user_id </label></td>
+<td><input  th:field="*{auth_user_id}" type="text"  readonly="readonly"/></td>
+</tr>
+
+<tr>
+<td><label for="first_name">first_name: </label></td>
+<td><input th:field="*{first_name}" name="first_name" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="last_name">last_name:</label></td>
+<td><input  th:field="*{last_name}" name="last_name" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="email">email: </label></td>
+<td><input th:field="*{email}" name="email" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="password">Password:</label></td>
+<td><input th:field="*{password}" name="password"
+type="password" /></td>
+</tr>
+
+<tr>
+<td><label for="status">status </label></td>
+<td><input th:field="*{status}" name="status" type="text" /></td>
+</tr>
+
+
+</tbody>
+</table>
+ <button type="submit" href="/register">Submit</button>
+</form>
+</html>

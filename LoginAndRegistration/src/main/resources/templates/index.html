@@ -1,0 +1,37 @@
+<html>
+<body>
+	<h2>How to fetch data from database in Spring MVC</h2>
+
+       <form action="/register" method="post">
+        <a href="registration">Create new product</a>
+	<table border="1">
+
+		<th>auth_user_id</th>
+		<th>email</th>
+		<th>first_name</th>
+		<th>last_name</th>
+		<th>password</th>
+		<th>status</th>
+		<th>edit</th>
+		<th>delete</th>
+	<tbody>
+			<tr th:each = "emp:${listEmp}">
+				<td th:text = "${emp.auth_user_id}">auth_user_id</td>
+				<td th:text = "${emp.email}">email</td>
+				<td th:text = "${emp.first_name}">first_name</td>
+				<td th:text = "${emp.last_name}">last_name</td>
+				<td th:text = "${emp.password}">password</td>
+				<td th:text = "${emp.status}">status</td>
+				<td>
+				<a th:href = "@{'/edit/'+${emp.auth_user_id}}">edit</a>
+				</td>
+				<td>
+				<a th:href = "@{'/delete/'+${emp.auth_user_id}}">delete</a>
+				</td>
+
+			</tr>
+	</tbody>
+	</table>
+
+</body>
+</html>
